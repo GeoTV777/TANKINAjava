@@ -61,20 +61,123 @@ public class Main {
 
 //  Калькулятор)) условный
 
+//        System.out.println("Введите первое число: ");
+//        float num1 = scan.nextFloat();
+//
+//        System.out.println("Введите второе число: ");
+//        float num2 = scan.nextFloat();
+//
+//        float res1 = num1 + num2;
+//        float res2 = num1 * num2;
+//        float res3 = num1 / num2;
+//        float res4 = num1 - num2;
+//        float res5 = num1 % num2;
+//
+//        System.out.println("Результат: ");
+//        System.out.println(res1 + "\n" + res2 + "\n" + res3 + "\n"+ res4 + "\n"+ res5);
+//  УСЛОВНЫЕ КОНСТРУКЦИИ if- else
+//        В конструкции if - else, else не обязательная часть, но всегда идёт после if.
+//        В консрукции if - else-if - else - else...  "else - if" может употребляться полько после if.
+//         В каждой из конструкций внутри может быть ещё встроено уловие if()...
+
+//        int a =65, b = 60;
+//        char sim1 = 'a', sim2 ='A';
+//        boolean isHAPPY = false;
+//        if (!isHAPPY) {
+//            System.out.println("Верно!!!");
+//        } else if (a >= b) {
+//            System.out.println("Проверка верности второго утверждения");
+//        } else {
+//            System.out.println("Не верно!!!");
+////        }
+//        int a =1, b = 44;
+//        char sim1 = 'a', sim2 ='A';
+//        boolean isHAPPY = false;
+//        if (!isHAPPY) {
+//            System.out.println("Верно!!!");
+//        } else if (a >= b) {
+//            System.out.println("Проверка верности второго утверждения");
+//        } else if(a == b){
+//            System.out.println("тест3");
+//        }  else if(a != b){
+//        System.out.println("тест4");
+//        } else if(a < b){
+//            System.out.println("тест5");
+//        }
+//        ИЛИ
+//        if (!isHAPPY || a == b) {  в этой конструкции || это означает "или"
+//        if (!isHAPPY && a == b) {   в этой конструкции &&  два амперсанта означает "и"
+//        if (!isHAPPY && a == b || sim1 != sim2) {  можно сочетать и указывать много условий в if
+
+//        Scanner scanner = new Scanner(System.in);
+//        System.out.println("Ведите роль: ");
+//        String role = scanner.nextLine() ;
+//        System.out.println("Ведите пароль: ");
+//        String pass = scanner.nextLine();
+//        if (role.equals("admin") && pass.equals("4856")) {
+//            System.out.println("Доступ разрешен! ");
+//        } else {
+//            System.out.println("Привет! Как Вас зовут?");
+//            String name = scan.nextLine();
+//
+//        }
+// ОПЕРАТОР  switch-case должен завершаться оператором break, но в этой ситуации проверяются только четкие значения (равно пяти, например).
+//        Последний   break можно не дописывать.
+//
+//        Scanner scanner = new Scanner(System.in);
+//        int num = scan.nextInt();
+//        switch (num) {
+//            case 1:
+//                System.out.println("Number is 1");
+//                break;
+//            case 2:
+//                System.out.println("Number is 2");
+//                break;
+//            case 10:
+//                System.out.println("Number is 3");
+//                break;
+//            case 6:
+//            System.out.println("Number is 4");
+//        }
+
+//        ЕЩЁ ОДИН КАЛЬКУЛЯТОР С switch-case
+//
+        Scanner scanner = new Scanner(System.in);
         System.out.println("Введите первое число: ");
-        float num1 = scan.nextFloat();
+        int num1 = scan.nextInt();
 
         System.out.println("Введите второе число: ");
-        float num2 = scan.nextFloat();
+        int num2 = scan.nextInt();
 
-        float res1 = num1 + num2;
-        float res2 = num1 * num2;
-        float res3 = num1 / num2;
-        float res4 = num1 - num2;
-        float res5 = num1 % num2;
+        int res;
 
-        System.out.println("Результат: ");
-        System.out.println(res1 + "\n" + res2 + "\n" + res3 + "\n"+ res4 + "\n"+ res5);
+        System.out.println(" Действие: ");
+        String action = scan.nextLine();
+
+        switch (action){
+            case "+":
+                    res = num1 + num2;
+                System.out.println("Результат: " + res);
+                break;
+            case "-":
+                res = num1 - num2;
+                System.out.println("Результат: " + res);
+                break;
+            case "/":
+                if (num2 ==0)
+                    System.out.println("Error");
+                res = num1 / num2;
+                System.out.println("Результат: " + res);
+                break;
+            case "*":
+                res = num1 * num2;
+                System.out.println("Результат: " + res);
+                break;
+            default:
+                System.out.println("Вы что-то не то ввели!");
+        }
+
+
 
 
     }
